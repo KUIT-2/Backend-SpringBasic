@@ -20,6 +20,17 @@ public class HomeController {
 
     private final MemoryQuestionRepository memoryQuestionRepository;
 
+    /*@RequestMapping("/")
+    public ModelAndView showHome(HttpServletRequest request, HttpServletResponse response) {
+        log.info("HomeController.showHome");
+
+        List<Question> questions = memoryQuestionRepository.findAll();
+        ModelAndView mav = new ModelAndView("home");
+        //mav.getModel().put("questions", questions);
+        mav.addObject("questions", questions);
+        return mav;
+    }*/
+
     @RequestMapping("/homeV1")
 //    @RequestMapping("/")
     public ModelAndView showHomeV1(HttpServletRequest request, HttpServletResponse response) {
