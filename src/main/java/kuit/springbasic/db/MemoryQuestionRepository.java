@@ -2,6 +2,7 @@ package kuit.springbasic.db;
 
 
 import kuit.springbasic.domain.Question;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -12,7 +13,6 @@ import java.util.Map;
 public class MemoryQuestionRepository {
     private Map<String, Question> questions= new HashMap<>();
     private static int PK = 0;
-
     public MemoryQuestionRepository() {
         insert(new Question("이주언","건대 어떻게 가나요?","홍대에서 건대 어떻게 가나요?",1));
         insert(new Question("강연주","서버 개잘하는데 질문받음","질문 ㄱ",0));
