@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Repository
+@Repository             // SpringBean으로 등록
 public class MemoryQuestionRepository {
     private Map<String, Question> questions= new HashMap<>();
     private static int PK = 0;
